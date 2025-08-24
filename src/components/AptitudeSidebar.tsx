@@ -60,15 +60,15 @@ const AptitudeSidebar: React.FC<AptitudeSidebarProps> = ({ onSelectChapter }) =>
   };
 
   return (
-    <aside className="w-64 bg-gray-800 text-white p-4 overflow-y-auto">
-      <h2 className="text-2xl font-bold mb-4 text-cyan-400">Topics</h2>
+    <aside className="w-64 bg-muted text-muted-foreground p-4 overflow-y-auto">
+      <h2 className="text-2xl font-bold mb-4 text-primary">Topics</h2>
       <nav>
         {sidebarData.map((section) => (
           <div key={section.section} className="mb-4">
             {/* Section Toggle */}
             <button
               onClick={() => toggleSection(section.section)}
-              className="w-full text-left px-3 py-2 rounded-md bg-gray-700 hover:bg-gray-600 focus:outline-none transition-colors duration-200 font-semibold"
+              className="w-full text-left px-3 py-2 rounded-md bg-background hover:bg-background/90 focus:outline-none transition-colors duration-200 font-semibold"
             >
               {section.section}
             </button>
@@ -80,7 +80,7 @@ const AptitudeSidebar: React.FC<AptitudeSidebarProps> = ({ onSelectChapter }) =>
                   <li key={chapter.id} className="mb-1">
                     <button
                       onClick={() => onSelectChapter(chapter.id)}
-                      className="w-full text-left px-3 py-2 rounded-md hover:bg-gray-700 focus:outline-none focus:bg-cyan-600 transition-colors duration-200"
+                      className="w-full text-left px-3 py-2 rounded-md hover:bg-accent focus:outline-none focus:bg-accent transition-colors duration-200"
                     >
                       {chapter.title}
                     </button>

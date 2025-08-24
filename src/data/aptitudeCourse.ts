@@ -93,8 +93,67 @@ export const aptitudeCourse: AptitudeChapter[] = [
             "HCF (Highest Common Factor) is the largest number that divides two or more numbers."
         ],
         detailedNotes: {
-            "HCF": ["The largest number that divides two or more numbers."],
-            "LCM": ["The smallest number that is a multiple of two or more numbers."]
+          "Introduction": [
+            "Think of LCM and HCF as two different tools for solving puzzles. HCF helps you find the best way to share or divide things into equal pieces, while LCM helps you figure out when things will happen together again."
+          ],
+          "HCF (Highest Common Factor): The \"Greatest Sharer\"": [
+            "The HCF, also known as the Greatest Common Divisor (GCD), is the largest possible number that can divide a set of numbers without leaving any remainder.",
+            "Analogy: Imagine you have two ribbons, one 12 meters long and the other 18 meters long. You want to cut both ribbons into smaller pieces of equal length, but you want these pieces to be as long as possible. The length of the longest possible piece you can cut is the HCF of 12 and 18."
+          ],
+          "How to Find the HCF": [
+            "The easiest and most reliable method is Prime Factorization.",
+            "Step 1: Break down each number into its prime factors (its \"building blocks\").",
+            "Step 2: List all the common prime factors that appear in every number.",
+            "Step 3: For each common factor, choose the one with the lowest power.",
+            "Step 4: Multiply these chosen factors together to get the HCF.",
+            "Example: Find the HCF of 24 and 36.",
+            "Step 1 (Factorize): 24 = 2^3 x 3^1, 36 = 2^2 x 3^2",
+            "Step 2 (Find Commons): The common prime factors are 2 and 3.",
+            "Step 3 (Pick Lowest Powers): The lowest power of 2 is 2^2. The lowest power of 3 is 3^1.",
+            "Step 4 (Multiply): HCF = 2^2 x 3^1 = 4 x 3 = 12."
+          ],
+          "LCM (Least Common Multiple): The \"First Meeting Point\"": [
+            "The LCM is the smallest possible number that is a multiple of all the numbers in a set. In other words, it's the smallest number that all the given numbers can divide into perfectly.",
+            "Analogy: Imagine two people are running around a circular track. Person A completes a lap in 3 minutes, and Person B completes a lap in 4 minutes. If they start at the same time, when will they be at the starting line together again for the first time? This \"first meeting point\" is the LCM of 3 and 4."
+          ],
+          "How to Find the LCM": [
+            "We use Prime Factorization again, but with a slightly different rule.",
+            "Step 1: Break down each number into its prime factors.",
+            "Step 2: List ALL the prime factors that appear in any of the numbers.",
+            "Step 3: For each prime factor, choose the one with the highest power.",
+            "Step 4: Multiply these chosen factors together to get the LCM.",
+            "Example: Find the LCM of 24 and 36.",
+            "Step 1 (Factorize): 24 = 2^3 x 3^1, 36 = 2^2 x 3^2",
+            "Step 2 (Find ALL Factors): The prime factors involved are 2 and 3.",
+            "Step 3 (Pick Highest Powers): The highest power of 2 is 2^3. The highest power of 3 is 3^2.",
+            "Step 4 (Multiply): LCM = 2^3 x 3^2 = 8 x 9 = 72."
+          ],
+          "The Golden Rule: Connecting HCF and LCM": [
+            "For any two positive numbers, A and B, there is a beautiful relationship between them and their HCF and LCM.",
+            "Formula: HCF(A, B) × LCM(A, B) = A × B",
+            "Why it's useful: This is one of the most frequently tested concepts! If you are given any three of these values, you can instantly find the fourth.",
+            "Example: For our numbers 24 and 36: HCF = 12, LCM = 72. HCF × LCM = 12 × 72 = 864. Product of numbers = 24 × 36 = 864. They match perfectly!"
+          ],
+          "HCF and LCM of Fractions": [
+            "Yes, you can find the HCF and LCM for fractions too! The rules are simple and opposite to each other.",
+            "LCM of Fractions: You want the final fraction to be as \"large\" as possible. So, you make the top (numerator) large and the bottom (denominator) small. Formula: LCM of Fractions = (LCM of Numerators) / (HCF of Denominators)",
+            "HCF of Fractions: You want the final fraction to be as \"small\" as possible. So, you make the top small and the bottom large. Formula: HCF of Fractions = (HCF of Numerators) / (LCM of Denominators)",
+            "Example: Find the LCM of 2/3 and 4/9. Step 1 (LCM of Numerators): LCM of (2, 4) is 4. Step 2 (HCF of Denominators): HCF of (3, 9) is 3. Step 3 (Combine): The LCM is 4/3."
+          ],
+          "Word Problems: When to Use Which Tool?": {
+            "Use HCF when the problem involves:": [
+              "Splitting things into smaller sections.",
+              "Finding the largest size for items (like tiles to pave a floor).",
+              "Arranging things into rows or groups with an equal number of items.",
+              "Keywords: \"Greatest\", \"Largest\", \"Maximum\", \"Highest\", \"Dividing equally\"."
+            ],
+            "Use LCM when the problem involves:": [
+              "Finding a future point in time when events will happen together.",
+              "Combining things that are in different cycles.",
+              "Keywords: \"Least\", \"Smallest\", \"Minimum\", \"Together\", \"Simultaneously\", \"Next time\".",
+              "Classic examples: Traffic lights changing, bells ringing, runners on a circular track."
+            ]
+          }
         },
         examples: [
           {
