@@ -98,7 +98,7 @@ All colors MUST be HSL.
     --secondary-foreground: 214 32% 15%;
 
     --muted: 217 32% 94%;
-    --muted-foreground: 217 10% 46%;
+    --muted-foreground: 217 10% 30%;
 
     --accent: 217 91% 65%;
     --accent-foreground: 0 0% 100%;
@@ -127,5 +127,27 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-4xl mt-8 mb-4;
+  }
+
+  h2 {
+    @apply text-3xl mt-6 mb-3;
+  }
+
+  h3 {
+    @apply text-2xl mt-4 mb-2;
+  }
+
+  p, ul, ol {
+    @apply mb-4;
   }
 }
