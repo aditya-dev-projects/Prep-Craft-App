@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 100% 6%;
+    --foreground: 213 31% 91%;
+
+    --card: 214 32% 10%;
+    --card-foreground: 213 31% 91%;
+
+    --popover: 214 32% 10%;
+    --popover-foreground: 213 31% 91%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 100% 6%;
+    --primary-glow: 217 91% 70%;
+
+    --secondary: 214 32% 15%;
+    --secondary-foreground: 213 31% 91%;
+
+    --muted: 214 32% 15%;
+    --muted-foreground: 217 10% 64%;
+
+    --accent: 217 91% 65%;
+    --accent-foreground: 210 100% 6%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 210 100% 6%;
+
+    --border: 214 32% 20%;
+    --input: 214 32% 15%;
+    --ring: 217 91% 60%;
+
+    /* Study motivation colors */
+    --success: 120 60% 50%;
+    --success-foreground: 0 0% 100%;
+    --warning: 45 100% 60%;
+    --warning-foreground: 0 0% 100%;
+    --info: 200 100% 60%;
+    --info-foreground: 0 0% 100%;
+
+    /* Progress colors */
+    --progress-easy: 120 60% 50%;
+    --progress-medium: 45 100% 60%;
+    --progress-hard: 0 60% 50%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 70%));
+    --gradient-accent: linear-gradient(135deg, hsl(217 91% 65%), hsl(214 32% 15%));
+    --gradient-success: linear-gradient(135deg, hsl(120 60% 50%), hsl(217 91% 60%));
+
+    /* Shadows */
+    --shadow-glow: 0 10px 30px -10px hsl(217 91% 60% / 0.5);
+    --shadow-accent: 0 10px 20px -5px hsl(217 91% 65% / 0.3);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 214 32% 15%;
+    --heading-foreground: 224 44% 11%;
+    --body-foreground: 225 15% 26%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 214 32% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 214 32% 15%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 70%;
+
+    --secondary: 217 32% 94%;
+    --secondary-foreground: 214 32% 15%;
+
+    --muted: 217 32% 94%;
+    --muted-foreground: 217 10% 46%;
+
+    --accent: 217 91% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 32% 85%;
+    --input: 217 32% 85%;
+    --ring: 217 91% 60%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
