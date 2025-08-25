@@ -78,51 +78,60 @@ const AptitudeSidebar: React.FC<AptitudeSidebarProps> = ({ onSelectChapter }) =>
         </button>
       </div>
 
-      {/* Sidebar - Conditional rendering for mobile */}
+      {/* Sidebar */}
       <aside
-        className={`fixed inset-y-0 left-0 z-50 w-64 bg-muted text-muted-foreground p-4 overflow-y-auto 
-          md:relative md:translate-x-0 md:border-r md:w-64
-          transform transition-transform duration-300 ease-in-out
+        className={`fixed inset-y-0 left-0 z-50 w-64 bg-muted text-muted-foreground border-r border-border md:h-screen
+          transform transition-transform duration-300 ease-in-out md:relative md:translate-x-0
           ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}
       >
-        <div className="flex justify-between items-center mb-4 md:hidden">
-          <h2 className="text-2xl font-bold text-primary">Topics</h2>
-          <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-md hover:bg-background/90">
-            <X size={24} />
-          </button>
-        </div>
-        <nav>
-          {sidebarData.map((section) => (
-            <div key={section.section} className="mb-4">
-              {/* Section Toggle */}
-              <button
-                onClick={() => toggleSection(section.section)}
-                className="w-full text-left px-3 py-2 rounded-md bg-background hover:bg-background/90 focus:outline-none transition-colors duration-200 font-semibold flex justify-between items-center"
-              >
-                {section.section}
-                <ChevronDown className={`w-4 h-4 transition-transform ${openSections[section.section] ? 'rotate-180' : ''}`} />
-              </button>
+        <div className="flex flex-col h-full">
+          {/* Sidebar Header */}
+          <div className="p-4 border-b border-border flex justify-between items-center">
+            <h2 className="text-xl font-bold text-primary">Topics</h2>
+            <button 
+              onClick={() => setIsMobileMenuOpen(false)} 
+              className="p-2 rounded-md hover:bg-background/90 md:hidden"
+            >
+              <X size={24} />
+            </button>
+          </div>
 
-              {/* Chapters (expand/collapse) */}
-              <ul
-                className={`mt-2 ml-4 overflow-hidden transition-all duration-300 ease-in-out ${
-                  openSections[section.section] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                }`}
-              >
-                {section.chapters.map((chapter) => (
-                  <li key={chapter.id} className="mb-1">
-                    <button
-                      onClick={() => handleSelectChapter(chapter.id)}
-                      className="w-full text-left px-3 py-2 rounded-md hover:bg-accent focus:outline-none focus:bg-accent transition-colors duration-200"
-                    >
-                      {chapter.title}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </nav>
+          {/* Scrollable Navigation */}
+          <div className="flex-1 overflow-y-auto">
+            <nav className="p-4">
+              {sidebarData.map((section) => (
+                <div key={section.section} className="mb-4">
+                  {/* Section Toggle */}
+                  <button
+                    onClick={() => toggleSection(section.section)}
+                    className="w-full text-left px-3 py-2 rounded-md bg-background hover:bg-background/90 focus:outline-none transition-colors duration-200 font-semibold flex justify-between items-center"
+                  >
+                    <span>{section.section}</span>
+                    <ChevronDown className={`w-4 h-4 transition-transform ${openSections[section.section] ? 'rotate-180' : ''}`} />
+                  </button>
+
+                  {/* Chapters (expand/collapse) */}
+                  <ul
+                    className={`mt-2 ml-2 overflow-hidden transition-all duration-300 ease-in-out ${
+                      openSections[section.section] ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                  >
+                    {section.chapters.map((chapter) => (
+                      <li key={chapter.id} className="mb-1">
+                        <button
+                          onClick={() => handleSelectChapter(chapter.id)}
+                          className="w-full text-left px-3 py-2 rounded-md hover:bg-accent focus:outline-none focus:bg-accent transition-colors duration-200 text-sm"
+                        >
+                          {chapter.title}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </nav>
+          </div>
+        </div>
       </aside>
       
       {/* Overlay to close sidebar when clicking outside on mobile */}
