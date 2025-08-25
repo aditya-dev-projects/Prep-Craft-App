@@ -15,6 +15,12 @@ import Probability from './aptitude-chapters/Probability';
 import Algebra from './aptitude-chapters/Algebra';
 import GeometryAndMensuration from './aptitude-chapters/GeometryAndMensuration';
 
+//Logical Reasoning
+import Series from './aptitude-chapters/LogicalReasoningChapters/Series';
+
+//VArc
+import ReadingComp from './aptitude-chapters/VarcChapters/ReadingComp';
+
 // In a real app, you would have a map of components like this
 const chapterComponents: { [key: string]: React.FC } = {
   'number-system': NumberSystem,
@@ -25,6 +31,15 @@ const chapterComponents: { [key: string]: React.FC } = {
   'ratio-proportion': RatioAndProportion,
   'time-speed-distance': TimeSpeedAndDistance,
   'time-work': TimeAndWork,
+
+
+
+  //Logical Reasoning 
+  'series': Series,
+
+  //Varc
+  'ReadingComp': ReadingComp,
+
   // 'another-chapter': AnotherChapterComponent,
 };
 
