@@ -1,4 +1,5 @@
 import React from "react";
+import LCMAndHCFQuiz from "../Quizzes/LCMAndHCFQuiz";
 
 export default function LCMAndHCF() {
   return (
@@ -115,7 +116,7 @@ export default function LCMAndHCF() {
         and their HCF and LCM.
       </p>
       <div className="p-4 mt-4 bg-primary/10 border-l-4 border-primary">
-        <p><strong>Formula:</strong> `HCF(A, B) × LCM(A, B) = A × B`</p>
+        <p><strong>Formula:</strong> `HCF(A, B) \times LCM(A, B) = A \times B`</p>
       </div>
       <p className="mt-4 text-muted-foreground">
         <strong>Why it's useful:</strong> This is one of the most frequently tested concepts! If you
@@ -126,7 +127,7 @@ export default function LCMAndHCF() {
         <ul className="list-disc ml-6 mt-2 text-muted-foreground">
             <li>HCF = 12</li>
             <li>LCM = 72</li>
-            <li>HCF × LCM = $12 \times 72 = 864$</li>
+            <li>HCF \times LCM = $12 \times 72 = 864$</li>
             <li>Product of numbers = $24 \times 36 = 864$.</li>
             <li>They match perfectly!</li>
         </ul>
@@ -195,6 +196,7 @@ export default function LCMAndHCF() {
             </ul>
         </div>
       </div>
+      <LCMAndHCFQuiz />
     </div>
   );
 }
