@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GeometryAndMensurationQuiz: React.FC = () => {
+const Partnershipss: React.FC = () => {
   return (
     <div>
       <p>Quiz is loading...</p>
@@ -8,4 +8,4 @@ const GeometryAndMensurationQuiz: React.FC = () => {
   );
 };
 
-export default GeometryAndMensurationQuiz;
+export default Partnershipss;

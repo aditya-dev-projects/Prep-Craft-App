@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AlgebraQuiz: React.FC = () => {
+const PipesAndCisternsQuiz: React.FC = () => {
   return (
     <div>
       <p>Quiz is loading...</p>
@@ -8,4 +8,4 @@ const AlgebraQuiz: React.FC = () => {
   );
 };
 
-export default AlgebraQuiz;
+export default PipesAndCisternsQuiz;

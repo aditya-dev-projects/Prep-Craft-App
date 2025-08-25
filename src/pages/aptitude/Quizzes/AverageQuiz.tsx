@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AveragesAndMixturesQuiz: React.FC = () => {
+const AverageQuiz: React.FC = () => {
   return (
     <div>
       <p>Quiz is loading...</p>
@@ -8,4 +8,4 @@ const AveragesAndMixturesQuiz: React.FC = () => {
   );
 };
 
-export default AveragesAndMixturesQuiz;
+export default AverageQuiz;

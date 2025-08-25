@@ -7,13 +7,23 @@ import Percentages from './aptitude-chapters/Percentages';
 import ProfitAndLoss from './aptitude-chapters/ProfitAndLoss';
 import SimpleAndCompoundInterest from './aptitude-chapters/SimpleAndCompoundInterest';
 import RatioAndProportion from './aptitude-chapters/RatioAndProportion';
-import TimeSpeedAndDistance from './aptitude-chapters/TimeSpeedAndDistance';
+import PipesAndCisterns from './aptitude-chapters/PipesAndCisterns';
 import TimeAndWork from './aptitude-chapters/TimeAndWork';
-import AveragesAndMixtures from './aptitude-chapters/AveragesAndMixtures';
+import Average from './aptitude-chapters/Average';
 import PermutationsAndCombinations from './aptitude-chapters/PermutationsAndCombinations';
 import Probability from './aptitude-chapters/Probability';
-import Algebra from './aptitude-chapters/Algebra';
-import GeometryAndMensuration from './aptitude-chapters/GeometryAndMensuration';
+import AgeProblems from './aptitude-chapters/AgeProblems';
+import Partnerships from './aptitude-chapters/Partnerships';
+import AllegationsAndMixtures from './aptitude-chapters/AllegationsAndMixtures';
+import ChainRule from './aptitude-chapters/ChainRule';
+import TrainProblems from './aptitude-chapters/TrainProblems';
+import BoatsAndStreams from './aptitude-chapters/BoatsAndStreams';
+import DataInterpretation from './aptitude-chapters/DataInterpretation';
+
+
+
+
+
 
 //Logical Reasoning
 import Series from './aptitude-chapters/LogicalReasoningChapters/Series';
@@ -29,8 +39,22 @@ const chapterComponents: { [key: string]: React.FC } = {
   'profit-loss': ProfitAndLoss,
   'simple-compound-interest': SimpleAndCompoundInterest,
   'ratio-proportion': RatioAndProportion,
-  'time-speed-distance': TimeSpeedAndDistance,
+  'pipes-cisterns': PipesAndCisterns,
   'time-work': TimeAndWork,
+  'age-problems': AgeProblems,
+  'average': Average,
+  'permutations-combinations': PermutationsAndCombinations,
+  'probability': Probability,
+  'partnerships': Partnerships,
+  'allegations-mixtures': AllegationsAndMixtures,
+  'chain-rule': ChainRule,
+  'train-problems': TrainProblems,
+  'boats-streams': BoatsAndStreams,
+  'data-interpretation': DataInterpretation,
+
+  
+  
+
 
 
 

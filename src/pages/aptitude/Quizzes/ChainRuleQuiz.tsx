@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TimeSpeedAndDistanceQuiz: React.FC = () => {
+const ChainRuleQuiz: React.FC = () => {
   return (
     <div>
       <p>Quiz is loading...</p>
@@ -8,4 +8,4 @@ const TimeSpeedAndDistanceQuiz: React.FC = () => {
   );
 };
 
-export default TimeSpeedAndDistanceQuiz;
+export default ChainRuleQuiz;
