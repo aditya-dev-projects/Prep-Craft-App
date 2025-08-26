@@ -1,6 +1,6 @@
 
 
-import React, { useState } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 
 interface QuizProps {
   quizData: {
@@ -12,18 +12,18 @@ interface QuizProps {
 
 const Quiz: React.FC<QuizProps> = ({ quizData }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [selectedOptions, setSelectedOptions] = useState<(string | null)[]>(Array(quizData.length).fill(null));
-  const [submittedAnswers, setSubmittedAnswers] = useState<(string | null)[]>(Array(quizData.length).fill(null));
+  const [selectedOptions, setSelectedOptions] = useState<(string | null)[]>(() => Array(quizData.length).fill(null));
+  const [submittedAnswers, setSubmittedAnswers] = useState<(string | null)[]>(() => Array(quizData.length).fill(null));
   const [score, setScore] = useState(0);
   const [showResults, setShowResults] = useState(false);
 
-  const handleOptionSelect = (option: string) => {
+  const handleOptionSelect = useCallback((option: string) => {
     const newSelectedOptions = [...selectedOptions];
     newSelectedOptions[currentQuestionIndex] = option;
     setSelectedOptions(newSelectedOptions);
-  };
+  }, [currentQuestionIndex, selectedOptions]);
 
-  const handleSubmit = () => {
+  const handleSubmit = useCallback(() => {
     const selectedOption = selectedOptions[currentQuestionIndex];
     if (selectedOption === null) return;
 
@@ -34,33 +34,36 @@ const Quiz: React.FC<QuizProps> = ({ quizData }) => {
     if (selectedOption === quizData[currentQuestionIndex].correctAnswer) {
       setScore(score + 1);
     }
-  };
+  }, [currentQuestionIndex, selectedOptions, submittedAnswers, quizData, score]);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     if (currentQuestionIndex < quizData.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
       setShowResults(true);
     }
-  };
+  }, [currentQuestionIndex, quizData.length]);
 
-  const handlePrevious = () => {
+  const handlePrevious = useCallback(() => {
     if (currentQuestionIndex > 0) {
       setCurrentQuestionIndex(currentQuestionIndex - 1);
     }
-  };
+  }, [currentQuestionIndex]);
 
-  const handleRetakeQuiz = () => {
+  const handleRetakeQuiz = useCallback(() => {
     setCurrentQuestionIndex(0);
     setSelectedOptions(Array(quizData.length).fill(null));
     setSubmittedAnswers(Array(quizData.length).fill(null));
     setScore(0);
     setShowResults(false);
-  };
+  }, [quizData.length]);
+
+  const wrongAnswers = useMemo(() => {
+    if (!showResults) return [];
+    return quizData.filter((_, index) => submittedAnswers[index] !== quizData[index].correctAnswer);
+  }, [showResults, submittedAnswers, quizData]);
 
   if (showResults) {
-    const wrongAnswers = quizData.filter((_, index) => submittedAnswers[index] !== quizData[index].correctAnswer);
-
     return (
       <div className="bg-gray-800 text-white p-8 rounded-lg shadow-2xl max-w-2xl mx-auto mt-10">
         <h2 className="text-3xl font-bold mb-6 text-center text-cyan-400">Quiz Results</h2>

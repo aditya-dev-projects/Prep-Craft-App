@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react'; // <-- Added ChevronDown here
 
 interface AptitudeSidebarProps {
@@ -73,17 +73,17 @@ const AptitudeSidebar: React.FC<AptitudeSidebarProps> = ({ onSelectChapter }) =>
   const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({});
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleSection = (section: string) => {
+  const toggleSection = useCallback((section: string) => {
     setOpenSections((prev) => ({
       ...prev,
       [section]: !prev[section],
     }));
-  };
+  }, []);
 
-  const handleSelectChapter = (chapterId: string) => {
+  const handleSelectChapter = useCallback((chapterId: string) => {
     onSelectChapter(chapterId);
     setIsMobileMenuOpen(false);
-  };
+  }, [onSelectChapter]);
 
   return (
     <>
@@ -164,4 +164,4 @@ const AptitudeSidebar: React.FC<AptitudeSidebarProps> = ({ onSelectChapter }) =>
   );
 };
 
-export default AptitudeSidebar;
+export default React.memo(AptitudeSidebar);

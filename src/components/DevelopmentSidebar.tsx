@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { developmentCourse } from '../data/developmentCourse';
@@ -8,18 +8,18 @@ const DevelopmentSidebar: React.FC = () => {
   const [openChapters, setOpenChapters] = useState<{ [key: string]: boolean }>({});
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleChapter = (chapterId: string) => {
+  const toggleChapter = useCallback((chapterId: string) => {
     setOpenChapters((prev) => ({
       ...prev,
       [chapterId]: !prev[chapterId],
     }));
-  };
+  }, []);
 
-  const handleSelect = () => {
+  const handleSelect = useCallback(() => {
     if (isMobileMenuOpen) {
       setIsMobileMenuOpen(false);
     }
-  };
+  }, [isMobileMenuOpen]);
 
   return (
     <>
@@ -110,4 +110,4 @@ const DevelopmentSidebar: React.FC = () => {
   );
 };
 
-export default DevelopmentSidebar;
+export default React.memo(DevelopmentSidebar);

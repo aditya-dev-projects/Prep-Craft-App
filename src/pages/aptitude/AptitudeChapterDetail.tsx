@@ -1,10 +1,11 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useAptitudeProgress } from "@/hooks/useAptitudeProgress";
-import { AptitudeTopicCard } from "@/components/AptitudeTopicCard";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Home } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { useAuth } from "@/hooks/useAuth";
+
+const AptitudeTopicCard = lazy(() => import("@/components/AptitudeTopicCard"));
 
 const AptitudeChapterDetail = () => {
   const { chapterId } = useParams();
@@ -68,15 +69,17 @@ const AptitudeChapterDetail = () => {
 
       <div className="container mx-auto px-4 sm:px-6 py-8">
         {/* Topics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-          {chapter.topics.map((topic) => (
-            <AptitudeTopicCard 
-              key={topic.name} 
-              topic={topic} 
-              onToggleStatus={() => toggleTopicStatus(chapter.id, topic.name)} 
-            />
-          ))}
-        </div>
+        <Suspense fallback={<div>Loading topics...</div>}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+            {chapter.topics.map((topic) => (
+              <AptitudeTopicCard 
+                key={topic.name} 
+                topic={topic} 
+                onToggleStatus={() => toggleTopicStatus(chapter.id, topic.name)} 
+              />
+            ))}
+          </div>
+        </Suspense>
       </div>
     </div>
   );

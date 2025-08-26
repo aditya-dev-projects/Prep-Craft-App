@@ -21,7 +21,7 @@ const NavHeader = () => {
 
   return (
     <header className="px-4 lg:px-6 h-16 flex items-center border-b sticky top-0 z-50 bg-background/95 backdrop-blur-sm">
-      <Link to="/" className="flex items-center justify-center">        <img src="/favicon.svg" alt="PREPCRAFT logo" className="h-6 w-6" />        <span className="ml-2 text-lg font-semibold">PREPCRAFT</span>      </Link>
+      <Link to="/" className="flex items-center justify-center">        <img src="/logo.svg" alt="PREPCRAFT logo" className="h-6 w-6" />        <span className="ml-2 text-lg font-semibold">PREPCRAFT</span>      </Link>
       <nav className="ml-auto hidden md:flex items-center gap-4 sm:gap-6">
         <Link to="/" className="text-sm font-medium hover:underline underline-offset-4">
           Home
