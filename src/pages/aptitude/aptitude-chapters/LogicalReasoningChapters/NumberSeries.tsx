@@ -117,3 +117,7 @@ const NumberSeries: React.FC = () => {
 
 
 export default NumberSeries;
+
+//Create the notes for Word Pattern same like before 
+
+// without changing the css just add the notes of word pattern line by line without missing anything and dont add quiz part in code
