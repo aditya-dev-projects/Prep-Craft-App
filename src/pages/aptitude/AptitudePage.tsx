@@ -28,6 +28,27 @@ import DataInterpretation from './aptitude-chapters/DataInterpretation';
 //Logical Reasoning
 import SeatingArrangment from './aptitude-chapters/LogicalReasoningChapters/SeatingArrangment';
 import NumberSeries from './aptitude-chapters/LogicalReasoningChapters/NumberSeries';
+import ClockProblems from './aptitude-chapters/LogicalReasoningChapters/ClockProblems';
+import Calendar from './aptitude-chapters/LogicalReasoningChapters/Calendar';
+import BloodRelations from './aptitude-chapters/LogicalReasoningChapters/BloodRelations';
+import Directions from './aptitude-chapters/LogicalReasoningChapters/Directions';
+import WordPattern from './aptitude-chapters/LogicalReasoningChapters/WordPattern';
+import CodingDecoding from './aptitude-chapters/LogicalReasoningChapters/CodingDecoding';
+import MathsOps from './aptitude-chapters/LogicalReasoningChapters/MathsOps';
+import VennDiagram from './aptitude-chapters/LogicalReasoningChapters/VennDiagram';
+import VisualReasoning from './aptitude-chapters/LogicalReasoningChapters/VisualReasoning';
+import PaperCuttingAndAdding from './aptitude-chapters/LogicalReasoningChapters/PaperCuttingAndAdding';
+import CubesAndDices from './aptitude-chapters/LogicalReasoningChapters/CubesAndDices';
+import DataSufficency from './aptitude-chapters/LogicalReasoningChapters/DataSufficency';
+
+
+
+
+
+
+
+
+
 
 //VArc
 import ReadingComp from './aptitude-chapters/VarcChapters/ReadingComp';
@@ -62,6 +83,18 @@ const chapterComponents: { [key: string]: React.FC } = {
   //Logical Reasoning 
   'seating-arrangement': SeatingArrangment,
   'number-series': NumberSeries,
+  'clock-problems': ClockProblems,
+  'calendar': Calendar,
+  'blood-relations': BloodRelations,
+  'directions': Directions,
+  'word-pattern': WordPattern,
+  'coding-decoding': CodingDecoding,
+  'maths-ops': MathsOps,
+  'venn-diagram': VennDiagram,
+  'visual-reasoning': VisualReasoning,
+  'paper-cutting-adding': PaperCuttingAndAdding,
+  'cubes-dices': CubesAndDices,
+  'data-sufficency': DataSufficency,
   
 
   //Varc

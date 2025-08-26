@@ -33,13 +33,27 @@ const sidebarData = [
     section: 'Logical Reasoning',
     chapters: [
       { id: 'number-series', title: 'Number Series' },
+      { id: 'seating-arrangement', title: 'Seating Arrangements' },
+      { id: 'clock-problems', title: 'Clock Problems' },
+      { id: 'calendar', title: 'Calendar' },
       { id: 'blood-relations', title: 'Blood Relations' },
       { id: 'directions', title: 'Directions' },
+      { id: 'word-pattern', title: 'Word Pattern' },
       { id: 'coding-decoding', title: 'Coding & Decoding' },
-      { id: 'puzzles', title: 'Puzzles' },
-      { id: 'data-sufficiency', title: 'Data Sufficiency' },
-      { id: 'syllogisms', title: 'Syllogisms' },
-      { id: 'seating-arrangement', title: 'Seating Arrangements' },
+      { id: 'maths-ops', title: 'Mathematical Operations' }, 
+      { id: 'venn-diagram', title: 'Venn Diagrams'},
+      { id: 'visual-reasoning', title: 'Visual Reasoning'},
+      { id: 'paper-cutting-adding', title: 'Paper Cutting & Adding'},
+      { id: 'cubes-dices', title: 'Cubes & Dices'},
+      { id: 'data-sufficency', title: 'Data Sufficency'},
+      
+      
+      
+
+      
+
+
+      
     ],
   },
   {
