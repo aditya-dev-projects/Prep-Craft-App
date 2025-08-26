@@ -32,14 +32,14 @@ const sidebarData = [
   {
     section: 'Logical Reasoning',
     chapters: [
-      { id: 'series', title: 'Series' },
+      { id: 'number-series', title: 'Number Series' },
       { id: 'blood-relations', title: 'Blood Relations' },
       { id: 'directions', title: 'Directions' },
       { id: 'coding-decoding', title: 'Coding & Decoding' },
       { id: 'puzzles', title: 'Puzzles' },
       { id: 'data-sufficiency', title: 'Data Sufficiency' },
       { id: 'syllogisms', title: 'Syllogisms' },
-      { id: 'seating-arrangements', title: 'Seating Arrangements' },
+      { id: 'seating-arrangement', title: 'Seating Arrangements' },
     ],
   },
   {

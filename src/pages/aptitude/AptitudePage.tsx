@@ -26,7 +26,8 @@ import DataInterpretation from './aptitude-chapters/DataInterpretation';
 
 
 //Logical Reasoning
-import Series from './aptitude-chapters/LogicalReasoningChapters/Series';
+import SeatingArrangment from './aptitude-chapters/LogicalReasoningChapters/SeatingArrangment';
+import NumberSeries from './aptitude-chapters/LogicalReasoningChapters/NumberSeries';
 
 //VArc
 import ReadingComp from './aptitude-chapters/VarcChapters/ReadingComp';
@@ -59,7 +60,9 @@ const chapterComponents: { [key: string]: React.FC } = {
 
 
   //Logical Reasoning 
-  'series': Series,
+  'seating-arrangement': SeatingArrangment,
+  'number-series': NumberSeries,
+  
 
   //Varc
   'ReadingComp': ReadingComp,
