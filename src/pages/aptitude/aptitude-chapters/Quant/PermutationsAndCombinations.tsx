@@ -1,5 +1,5 @@
 import React from 'react';
-import PermutationsAndCombinationsQuiz from '../Quizzes/PermutationsAndCombinationsQuiz';
+import PermutationsAndCombinationsQuiz from '../../Quizzes/PermutationsAndCombinationsQuiz';
 
 const PermutationsAndCombinations: React.FC = () => {
   return (

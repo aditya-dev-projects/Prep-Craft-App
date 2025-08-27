@@ -1,5 +1,5 @@
 import React from 'react';
-import RatioAndProportionQuiz from '../Quizzes/RatioAndProportionQuiz';
+import RatioAndProportionQuiz from '../../Quizzes/RatioAndProportionQuiz';
 
 const RatioAndProportion: React.FC = () => {
  return (

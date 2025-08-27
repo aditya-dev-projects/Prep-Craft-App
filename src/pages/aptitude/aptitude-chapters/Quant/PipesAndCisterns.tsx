@@ -1,5 +1,5 @@
 import React from 'react';
-import PipesAndCisternsQuiz from '../Quizzes/PipesAndCisternsQuiz';
+import PipesAndCisternsQuiz from '../../Quizzes/PipesAndCisternsQuiz';
 
 const PipesAndCisterns: React.FC = () => {
   return (

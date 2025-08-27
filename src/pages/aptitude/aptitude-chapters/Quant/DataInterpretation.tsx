@@ -1,5 +1,5 @@
 import React from 'react';
-import DataInterpretationQuiz from '../Quizzes/DataInterpretationQuiz';
+import DataInterpretationQuiz from '../../Quizzes/DataInterpretationQuiz';
 
 const DataInterpretation: React.FC = () => {
   return (

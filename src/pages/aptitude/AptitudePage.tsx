@@ -1,24 +1,24 @@
 
 import React, { useState } from 'react';
 import AptitudeSidebar from '../../components/AptitudeSidebar';
-import NumberSystem from './aptitude-chapters/NumberSystem';
-import LCMAndHCF from './aptitude-chapters/LCMAndHCF';
-import Percentages from './aptitude-chapters/Percentages';
-import ProfitAndLoss from './aptitude-chapters/ProfitAndLoss';
-import SimpleAndCompoundInterest from './aptitude-chapters/SimpleAndCompoundInterest';
-import RatioAndProportion from './aptitude-chapters/RatioAndProportion';
-import PipesAndCisterns from './aptitude-chapters/PipesAndCisterns';
-import TimeAndWork from './aptitude-chapters/TimeAndWork';
-import Average from './aptitude-chapters/Average';
-import PermutationsAndCombinations from './aptitude-chapters/PermutationsAndCombinations';
-import Probability from './aptitude-chapters/Probability';
-import AgeProblems from './aptitude-chapters/AgeProblems';
-import Partnerships from './aptitude-chapters/Partnerships';
-import AllegationsAndMixtures from './aptitude-chapters/AllegationsAndMixtures';
-import ChainRule from './aptitude-chapters/ChainRule';
-import TrainProblems from './aptitude-chapters/TrainProblems';
-import BoatsAndStreams from './aptitude-chapters/BoatsAndStreams';
-import DataInterpretation from './aptitude-chapters/DataInterpretation';
+import NumberSystem from './aptitude-chapters/Quant/NumberSystem';
+import LCMAndHCF from './aptitude-chapters/Quant/LCMAndHCF';
+import Percentages from './aptitude-chapters/Quant/Percentages';
+import ProfitAndLoss from './aptitude-chapters/Quant/ProfitAndLoss';
+import SimpleAndCompoundInterest from './aptitude-chapters/Quant/SimpleAndCompoundInterest';
+import RatioAndProportion from './aptitude-chapters/Quant/RatioAndProportion';
+import PipesAndCisterns from './aptitude-chapters/Quant/PipesAndCisterns';
+import TimeAndWork from './aptitude-chapters/Quant/TimeAndWork';
+import Average from './aptitude-chapters/Quant/Average';
+import PermutationsAndCombinations from './aptitude-chapters/Quant/PermutationsAndCombinations';
+import Probability from './aptitude-chapters/Quant/Probability';
+import AgeProblems from './aptitude-chapters/Quant/AgeProblems';
+import Partnerships from './aptitude-chapters/Quant/Partnerships';
+import AllegationsAndMixtures from './aptitude-chapters/Quant/AllegationsAndMixtures';
+import ChainRule from './aptitude-chapters/Quant/ChainRule';
+import TrainProblems from './aptitude-chapters/Quant/TrainProblems';
+import BoatsAndStreams from './aptitude-chapters/Quant/BoatsAndStreams';
+import DataInterpretation from './aptitude-chapters/Quant/DataInterpretation';
 
 
 

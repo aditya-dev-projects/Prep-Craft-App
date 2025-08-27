@@ -1,5 +1,5 @@
 import React from 'react';
-import AllegationsAndMixturess from '../Quizzes/AllegationsAndMixturess';
+import AllegationsAndMixturess from '../../Quizzes/AllegationsAndMixturess';
 
 const AllegationsAndMixtures: React.FC = () => {
   return (

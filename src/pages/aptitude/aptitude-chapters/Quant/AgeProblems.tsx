@@ -1,5 +1,5 @@
 import React from 'react';
-import AgeProblemss from '../Quizzes/AgeProblemss';
+import AgeProblemss from '../../Quizzes/AgeProblemss';
 
 const AgeProblems: React.FC = () => {
   return (

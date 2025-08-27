@@ -1,5 +1,5 @@
 import React from 'react';
-import ProbabilityQuiz from '../Quizzes/ProbabilityQuiz';
+import ProbabilityQuiz from '../../Quizzes/ProbabilityQuiz';
 
 const Probability: React.FC = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import LCMAndHCFQuiz from "../Quizzes/LCMAndHCFQuiz";
+import LCMAndHCFQuiz from "../../Quizzes/LCMAndHCFQuiz";
 
 export default function LCMAndHCF() {
   return (

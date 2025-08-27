@@ -1,5 +1,5 @@
 import React from 'react';
-import TimeAndWorkQuiz from '../Quizzes/TimeAndWorkQuiz';
+import TimeAndWorkQuiz from '../../Quizzes/TimeAndWorkQuiz';
 
 const TimeAndWork: React.FC = () => {
   return (

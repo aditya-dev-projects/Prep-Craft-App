@@ -1,5 +1,5 @@
 import React from "react";
-import NumberSystemQuiz from "../Quizzes/NumberSystemQuiz";
+import NumberSystemQuiz from "../../Quizzes/NumberSystemQuiz";
 
 export default function NumberSystem() {
   return (

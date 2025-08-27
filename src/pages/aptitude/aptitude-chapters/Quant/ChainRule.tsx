@@ -1,5 +1,5 @@
 import React from 'react';
-import ChainRuleQuiz from '../Quizzes/ChainRuleQuiz';
+import ChainRuleQuiz from '../../Quizzes/ChainRuleQuiz';
 
 const ChainRule: React.FC = () => {
  return (

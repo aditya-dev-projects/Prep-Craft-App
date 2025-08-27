@@ -1,5 +1,5 @@
 import React from 'react';
-import ProfitAndLossQuiz from '../Quizzes/ProfitAndLossQuiz';
+import ProfitAndLossQuiz from '../../Quizzes/ProfitAndLossQuiz';
 
 const ProfitAndLoss: React.FC = () => {
  return (

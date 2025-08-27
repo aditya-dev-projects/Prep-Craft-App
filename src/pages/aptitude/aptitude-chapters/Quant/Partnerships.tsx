@@ -1,5 +1,5 @@
 import React from 'react';
-import Partnershipss from '../Quizzes/Partnershipss';
+import Partnershipss from '../../Quizzes/Partnershipss';
 
 const Partnerships: React.FC = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import AverageQuiz from '../Quizzes/AverageQuiz';
+import AverageQuiz from '../../Quizzes/AverageQuiz';
 
 const Average: React.FC = () => {
   return (

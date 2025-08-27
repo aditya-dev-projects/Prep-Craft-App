@@ -1,5 +1,5 @@
 import React from 'react';
-import SimpleAndCompoundInterestQuiz from '../Quizzes/SimpleAndCompoundInterestQuiz';
+import SimpleAndCompoundInterestQuiz from '../../Quizzes/SimpleAndCompoundInterestQuiz';
 
 const SimpleAndCompoundInterest: React.FC = () => {
   return (
