@@ -16,6 +16,7 @@ import NavHeader from "./components/NavHeader";
 import DevelopmentPage from "./pages/development/DevelopmentPage";
 import AptitudePage from "./pages/aptitude/AptitudePage";
 import AptitudeChapterDetail from "./pages/aptitude/AptitudeChapterDetail";
+import DevelopmentChapterDetail from "./pages/development/DevelopmentChapterDetail";
 
 const queryClient = new QueryClient();
 
@@ -31,7 +32,10 @@ const App = () => (
             <Route path="/" element={<LandingPage />} />
             <Route path="/auth" element={<Auth />} />
             <Route element={<ProtectedRoute />}>
-              <Route path="/development" element={<DevelopmentPage />} />
+              <Route path="/development" element={<DevelopmentPage />}>
+                <Route path=":chapterId/:subChapterId" element={<DevelopmentChapterDetail />} />
+                <Route path="quiz/:chapterId" element={<DevelopmentChapterDetail />} />
+              </Route>
               <Route path="/aptitude" element={<AptitudePage />} />
               <Route path="/aptitude/:chapterId" element={<AptitudeChapterDetail />} />
               <Route path="/dsa" element={<Index />} />

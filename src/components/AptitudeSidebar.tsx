@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react'; // <-- Added ChevronDown here
 
 interface AptitudeSidebarProps {
@@ -33,13 +33,27 @@ const sidebarData = [
     section: 'Logical Reasoning',
     chapters: [
       { id: 'number-series', title: 'Number Series' },
+      { id: 'seating-arrangement', title: 'Seating Arrangements' },
+      { id: 'clock-problems', title: 'Clock Problems' },
+      { id: 'calendar', title: 'Calendar' },
       { id: 'blood-relations', title: 'Blood Relations' },
       { id: 'directions', title: 'Directions' },
+      { id: 'word-pattern', title: 'Word Pattern' },
       { id: 'coding-decoding', title: 'Coding & Decoding' },
-      { id: 'puzzles', title: 'Puzzles' },
-      { id: 'data-sufficiency', title: 'Data Sufficiency' },
-      { id: 'syllogisms', title: 'Syllogisms' },
-      { id: 'seating-arrangement', title: 'Seating Arrangements' },
+      { id: 'maths-ops', title: 'Mathematical Operations' }, 
+      { id: 'venn-diagram', title: 'Venn Diagrams'},
+      { id: 'visual-reasoning', title: 'Visual Reasoning'},
+      { id: 'paper-cutting-adding', title: 'Paper Cutting & Adding'},
+      { id: 'cubes-dices', title: 'Cubes & Dices'},
+      { id: 'data-sufficency', title: 'Data Sufficency'},
+      
+      
+      
+
+      
+
+
+      
     ],
   },
   {
@@ -59,17 +73,17 @@ const AptitudeSidebar: React.FC<AptitudeSidebarProps> = ({ onSelectChapter }) =>
   const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({});
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleSection = (section: string) => {
+  const toggleSection = useCallback((section: string) => {
     setOpenSections((prev) => ({
       ...prev,
       [section]: !prev[section],
     }));
-  };
+  }, []);
 
-  const handleSelectChapter = (chapterId: string) => {
+  const handleSelectChapter = useCallback((chapterId: string) => {
     onSelectChapter(chapterId);
     setIsMobileMenuOpen(false);
-  };
+  }, [onSelectChapter]);
 
   return (
     <>
@@ -150,4 +164,4 @@ const AptitudeSidebar: React.FC<AptitudeSidebarProps> = ({ onSelectChapter }) =>
   );
 };
 
-export default AptitudeSidebar;
+export default React.memo(AptitudeSidebar);
