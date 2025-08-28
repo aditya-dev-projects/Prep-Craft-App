@@ -21,34 +21,19 @@ export const useAuth = () => {
   const { toast } = useToast();
 
   useEffect(() => {
-    // Set up auth state listener
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
-      setAuthState(prev => ({
-        ...prev,
-        user,
-      }));
+      setAuthState(prev => ({ ...prev, user }));
 
-      // Fetch user role if authenticated
       if (user) {
         try {
-          // Check if user is admin using environment variable
           const adminUserId = import.meta.env.VITE_ADMIN_USER_ID;
           if (adminUserId && user.uid === adminUserId) {
-            console.log("Admin user detected, granting admin privileges");
-            setAuthState(prev => ({
-              ...prev,
-              role: 'admin',
-              loading: false,
-            }));
+            setAuthState(prev => ({ ...prev, role: 'admin', loading: false }));
             return;
           }
 
           const roleData = await userRoleService.getByUserId(user.uid);
-          setAuthState(prev => ({
-            ...prev,
-            role: roleData?.role ?? 'user',
-            loading: false,
-          }));
+          setAuthState(prev => ({ ...prev, role: roleData?.role ?? 'user', loading: false }));
         } catch (error) {
           console.error('Error fetching user role:', error);
           setAuthState(prev => ({ ...prev, role: 'user', loading: false }));
@@ -66,14 +51,13 @@ export const useAuth = () => {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      // Create user profile
       if (user) {
+        // --- THIS IS THE FINAL FIX ---
+        // We remove the user.uid entirely. The service will get the ID automatically.
         await profileService.create({
-          id: user.uid,
           display_name: displayName,
         });
 
-        // Create default user role
         await userRoleService.create({
           user_id: user.uid,
           role: 'user',
@@ -99,12 +83,10 @@ export const useAuth = () => {
   const signIn = async (email: string, password: string) => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
-
       toast({
         title: "Signed in successfully",
         description: "Welcome back!",
       });
-
       return { error: null };
     } catch (error: any) {
       toast({
@@ -119,12 +101,10 @@ export const useAuth = () => {
   const signOut = async () => {
     try {
       await firebaseSignOut(auth);
-
       toast({
         title: "Signed out successfully",
         description: "See you next time!",
       });
-
       return { error: null };
     } catch (error: any) {
       toast({

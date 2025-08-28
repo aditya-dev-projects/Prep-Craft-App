@@ -2,7 +2,7 @@
 import React, { useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { developmentCourse } from '../data/developmentCourse';
+import { developmentCourse } from '../data/courseData';
 
 const DevelopmentSidebar: React.FC = () => {
   const [openChapters, setOpenChapters] = useState<{ [key: string]: boolean }>({});
@@ -74,7 +74,7 @@ const DevelopmentSidebar: React.FC = () => {
                     {chapter.subChapters.map((subChapter) => (
                       <li key={subChapter.id} className="mb-1">
                         <Link
-                          to={`/development/${chapter.id}/${subChapter.id}`}
+                          to={`/development/${chapter.folder}/${subChapter.file}`}
                           onClick={handleSelect}
                           className="block w-full text-left px-3 py-2 rounded-md hover:bg-accent focus:outline-none focus:bg-accent transition-colors duration-200 text-xs"
                         >

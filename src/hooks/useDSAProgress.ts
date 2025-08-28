@@ -120,9 +120,9 @@ export const useDSAProgress = () => {
   };
 
   const getDifficultyProgress = () => {
-    let easy = { total: 0, completed: 0 };
-    let medium = { total: 0, completed: 0 };
-    let hard = { total: 0, completed: 0 };
+    const easy = { total: 0, completed: 0 };
+    const medium = { total: 0, completed: 0 };
+    const hard = { total: 0, completed: 0 };
 
     course.forEach(step => {
       step.lectures.forEach(lecture => {

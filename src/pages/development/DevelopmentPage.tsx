@@ -1,12 +1,23 @@
+// src/pages/development/DevelopmentPage.tsx
+
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import DevelopmentSidebar from '../../components/DevelopmentSidebar';
+import DevelopmentSidebar from '../../components/DevelopmentSidebar'; // Adjust this path if needed
 
+/**
+ * This component serves as the main layout for the entire "Development" course section.
+ * It renders the sidebar on the left and provides a main content area for the
+ * nested routes (like the chapter details) to be displayed.
+ */
 const DevelopmentPage: React.FC = () => {
   return (
     <div className="flex h-screen bg-background">
+      {/* The sidebar component you provided */}
       <DevelopmentSidebar />
+
+      {/* The main content area where the selected chapter/subchapter will be rendered */}
       <main className="flex-1 overflow-y-auto p-4 md:p-8">
+        {/* The Outlet component from react-router-dom acts as a placeholder */}
         <Outlet />
       </main>
     </div>
