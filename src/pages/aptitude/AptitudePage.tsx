@@ -52,6 +52,14 @@ import DataSufficency from './aptitude-chapters/LogicalReasoningChapters/DataSuf
 
 //VArc
 import ReadingComp from './aptitude-chapters/VarcChapters/ReadingComp';
+import SpottingErrors  from './aptitude-chapters/VarcChapters/SpottingErrors';
+import SentenceFormation from './aptitude-chapters/VarcChapters/SentenceFormation';
+import SynnonymAndAntonym from './aptitude-chapters/VarcChapters/SynnonymAndAntonym';
+import IdiomsAndPhrases from './aptitude-chapters/VarcChapters/IdiomsAndPhrases'
+
+
+
+
 
 // In a real app, you would have a map of components like this
 const chapterComponents: { [key: string]: React.FC } = {
@@ -99,6 +107,13 @@ const chapterComponents: { [key: string]: React.FC } = {
 
   //Varc
   'ReadingComp': ReadingComp,
+  'SpottingErrors': SpottingErrors,
+  'SentenceFormation': SentenceFormation,
+  'SynnonymAndAntonym': SynnonymAndAntonym,
+  'IdiomsAndPhrases': IdiomsAndPhrases,
+
+
+
 
   // 'another-chapter': AnotherChapterComponent,
 };

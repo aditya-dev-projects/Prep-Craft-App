@@ -59,12 +59,13 @@ const sidebarData = [
   {
     section: 'Verbal Ability',
     chapters: [
-      { id: 'reading-comprehension', title: 'Reading Comprehension' },
-      { id: 'sentence-correction', title: 'Sentence Correction' },
-      { id: 'para-jumbles', title: 'Para Jumbles' },
-      { id: 'synonyms-antonyms', title: 'Synonyms & Antonyms' },
-      { id: 'fill-blanks', title: 'Fill in the Blanks' },
-      { id: 'error-spotting', title: 'Error Spotting' },
+      { id: 'ReadingComp', title: 'Reading Comprehension' },
+      { id: 'SpottingErrors',title:'Spotting Errors'},
+      { id: 'SentenceFormation', title: 'Sentence Formation' },
+      { id: 'SynnonymAndAntonym', title: 'Synonyms & Antonyms'},
+      { id: 'IdiomsAndPhrases', title: 'Idioms & Phrases'}
+
+      
     ],
   },
 ];
