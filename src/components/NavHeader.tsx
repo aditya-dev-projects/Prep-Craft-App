@@ -14,6 +14,7 @@ import {
 import { useState } from "react";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import Logo from "./Logo";
 
 const NavHeader = () => {
   const { user, signOut } = useAuth();
@@ -21,7 +22,9 @@ const NavHeader = () => {
 
   return (
     <header className="px-4 lg:px-6 h-16 flex items-center border-b sticky top-0 z-50 bg-background/95 backdrop-blur-sm">
-      <Link to="/" className="flex items-center justify-center">        <img src="/logo.svg" alt="PREPCRAFT logo" className="h-6 w-6" />        <span className="ml-2 text-lg font-semibold">PREPCRAFT</span>      </Link>
+      <Link to="/" className="flex items-center justify-center">
+        <Logo />
+      </Link>
       <nav className="ml-auto hidden md:flex items-center gap-4 sm:gap-6">
         <Link to="/" className="text-sm font-medium hover:underline underline-offset-4">
           Home
@@ -83,6 +86,9 @@ const NavHeader = () => {
           </SheetTrigger>
           <SheetContent side="right">
             <div className="flex flex-col gap-4 py-6">
+              <Link to="/" className="flex items-center justify-center" onClick={() => setIsOpen(false)}>
+                <Logo />
+              </Link>
               <Link to="/" className="text-lg font-medium hover:underline underline-offset-4" onClick={() => setIsOpen(false)}>
                 Home
               </Link>
