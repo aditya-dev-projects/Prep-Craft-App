@@ -32,7 +32,7 @@ export const developmentCourse: { title: string; chapters: Chapter[] } = {
         { id: '1.4', title: 'Introduction to the MERN Stack', file: '04-Introduction-to-the-MERN-Stack' },
         { id: '1.5', title: 'Development Environment Setup', file: '05-Development-Environment-Setup' },
         { id: '1.6', title: 'Code Editors & Extensions', file: '06-Code-Editors-and-Extensions' },
-        { id: '1.7', title: 'Terminal/Command Line Basics', file: '07-Terminal-Command-Line-Basics' } 
+        { id: '1.7', title: 'Terminal/Command Line Basics', file: '07-Terminal-and-Command-Line-Basics' } 
       ] 
     },
     // Chapter 2: Uses PascalCase as per your file system
