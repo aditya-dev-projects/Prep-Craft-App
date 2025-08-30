@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/assets/index-CFpHURLG.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        a {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #0f172a; /* Dark theme primary color */
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 0.3rem;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #1e293b; /* Slightly lighter dark theme color */
+        }
+
+        /* Dark mode styles */
+        html.dark body {
+            background-color: #0f172a;
+            color: #ffffff;
+        }
+        html.dark .container {
+            background-color: #1e293b;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        html.dark a {
+            background-color: #334155;
+        }
+        html.dark a:hover {
+            background-color: #475569;
+        }
+
+        /* Light mode styles */
+        html:not(.dark) body {
+            background-color: #ffffff;
+            color: #1e293b;
+        }
+        html:not(.dark) .container {
+            background-color: #f1f5f9;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        html:not(.dark) a {
+            background-color: #0f172a;
+        }
+        html:not(.dark) a:hover {
+            background-color: #1e293b;
+        }
+    </style>
+    <script>
+        // Function to apply theme based on localStorage or system preference
+        function applyTheme() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark' || (theme === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        }
+
+        // Apply theme on page load
+        applyTheme();
+
+        // Listen for changes in system theme preference
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>404 - Page Not Found</h1>
+        <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+        <a href="/">Go to Home Page</a>
+    </div>
+</body>
+</html>
